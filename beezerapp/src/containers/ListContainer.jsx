@@ -1,6 +1,6 @@
 import React from 'react';
 import fire from '../fire.js';
-import AccountSelector from '../components/AccountSelector';
+import UserSelector from '../components/UserSelector';
 import AccountDetail from '../components/AccountDetail';
 
 class ListContainer extends React.Component {
@@ -39,7 +39,7 @@ class ListContainer extends React.Component {
       return (
         <div>
         <h2 style={style}>Accounts</h2>
-        <AccountSelector users={this.state.users} selectAccount={this.setFocusUser.bind(this)} />
+        <UserSelector users={this.state.users} selectUser={this.setFocusUser.bind(this)} />
         <AccountDetail user={this.state.focusUser} />
         </div>
         );

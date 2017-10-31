@@ -17,8 +17,14 @@ class ListContainer extends React.Component {
     let usersRef = fire.database().ref('users').orderByKey().limitToLast(100);
     usersRef.on('child_added', snapshot => {
       let user = { text: snapshot.val(), id: snapshot.key };
-      this.setState({ users: [user.text].concat(this.state.users) });
-      console.log(this.state.users);
+      this.setState({ users: [user.text].concat(this.state.users)},);
+      // console.log(this.state.users);
+    })
+    let accountsRef = fire.database().ref('accounts').orderByKey().limitToLast(100);
+    accountsRef.on('child_added', snapshot => {
+      let account = {text: snapshot.val(), id: snapshot.key };
+      this.setState({ accounts: [account].concat(this.state.accounts)},);
+      console.log(this.state.accounts);
     })
   }
 

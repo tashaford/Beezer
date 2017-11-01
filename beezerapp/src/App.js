@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Flexbox from 'flexbox-react';
 import ListContainer from './containers/ListContainer';
 
 class App extends Component {
@@ -14,10 +15,14 @@ class App extends Component {
 
 
     return (
-      <div style={style} className="App">
-        <ListContainer />
-        <style>{'body { background-color: #d3d3d3;}'}</style>
-      </div>
+      <Flexbox flexDirection="column" minHeight="100px">
+        <Flexbox flexGrow={1}>
+          <div style={style} className="App">
+            <ListContainer />
+            <style>{'body { background-color: #d3d3d3;}'}</style>
+          </div>
+        </Flexbox>
+      </Flexbox>
       );
   }
 }

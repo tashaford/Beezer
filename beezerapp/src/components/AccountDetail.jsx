@@ -1,4 +1,5 @@
 import React from 'react';
+import Flexbox from 'flexbox-react';
 
 class AccountDetail extends React.Component {
   render(){
@@ -34,16 +35,20 @@ class AccountDetail extends React.Component {
       }
     
     return (
-      <div>
-          <p style={headingStyle}>User name:</p>
-          <p style={style}>{this.props.user.name}</p>
+      <Flexbox flexDirection="column" minHeight="100vh">
+        <Flexbox flexGrow={1}>
+          <div>
+            <p style={headingStyle}>User name:</p>
+            <p style={style}>{this.props.user.name}</p>
       
-          <p style={headingStyle}>User id:</p>
-          <p style={style}>{this.props.user.account}</p>
+            <p style={headingStyle}>User id:</p>
+            <p style={style}>{this.props.user.account}</p>
         
-          <p style={headingStyle}>App name:</p>
-          <p style={style}>{app}</p>
-      </div>
+            <p style={headingStyle}>App name:</p>
+            <p style={style}>{app}</p>
+          </div>
+        </Flexbox>
+      </Flexbox>
     );
   }
 }

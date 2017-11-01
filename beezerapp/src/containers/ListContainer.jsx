@@ -1,5 +1,6 @@
 import React from 'react';
 import fire from '../fire.js';
+import Flexbox from 'flexbox-react';
 import UserSelector from '../components/UserSelector';
 import AccountDetail from '../components/AccountDetail';
 
@@ -48,13 +49,17 @@ class ListContainer extends React.Component {
     }
 
     return (
-      <div>
-        <p style={headingStyle}>Beezer Users</p>
-        <p style={textStyle}>Pick a user from the list below</p>
-        <UserSelector users={this.state.users} selectUser={this.setFocusUser.bind(this)} />
-        <AccountDetail user={this.state.focusUser} accounts={this.state.accounts} />
-      </div>
-      );
+      <Flexbox flexDirection="column" minHeight="100vh">
+        <Flexbox flexGrow={1}>
+          <div>
+            <p style={headingStyle}>Beezer Users</p>
+            <p style={textStyle}>Pick a user from the list below</p>
+            <UserSelector users={this.state.users} selectUser={this.setFocusUser.bind(this)} />
+            <AccountDetail user={this.state.focusUser} accounts={this.state.accounts} />
+          </div>
+        </Flexbox>
+      </Flexbox>
+    );
   }
 }
 

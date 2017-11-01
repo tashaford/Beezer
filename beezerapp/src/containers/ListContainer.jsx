@@ -18,13 +18,11 @@ class ListContainer extends React.Component {
     usersRef.on('child_added', snapshot => {
       let user = { text: snapshot.val(), id: snapshot.key };
       this.setState({ users: [user.text].concat(this.state.users)},);
-      // console.log(this.state.users);
     })
     let accountsRef = fire.database().ref('accounts').orderByKey().limitToLast(100);
     accountsRef.on('child_added', snapshot => {
       let account = {text: snapshot.val(), id: snapshot.key };
       this.setState({ accounts: [account].concat(this.state.accounts)},);
-      console.log(this.state.accounts);
     })
   }
 
@@ -46,7 +44,7 @@ class ListContainer extends React.Component {
         <div>
         <h2 style={style}>Accounts</h2>
         <UserSelector users={this.state.users} selectUser={this.setFocusUser.bind(this)} />
-        <AccountDetail user={this.state.focusUser} />
+        <AccountDetail user={this.state.focusUser} accounts={this.state.accounts} />
         </div>
         );
     }

@@ -12,7 +12,6 @@ class AccountDetail extends React.Component {
       if (account.id === id){
         app = "hello";
         Object.keys(account.text.apps).forEach(function(key) {
-            console.log(account.text.apps[key].title);
             app = account.text.apps[key].title;
         });
        
@@ -20,15 +19,29 @@ class AccountDetail extends React.Component {
     }
 
     const style = {
-        fontSize: '30px',
+        fontSize: '20px',
         color: 'rebeccapurple',
-        textAlign: 'center'
+        marginLeft: '6em'
+      }
+      const headingStyle = {
+        fontSize: '20px',
+        marginLeft: '5em',
       }
     
     return (
       <div>
-        <h3 style={style}>{this.props.user.name}</h3>
-        <h3 style={style}>{app}</h3>
+        <div>
+          <p style={headingStyle}>User name is:</p>
+          <p style={style}>{this.props.user.name}</p>
+        </div>
+        <div>
+          <p style={headingStyle}>User id is:</p>
+          <p style={style}>{this.props.user.account}</p>
+        </div>
+        <div>
+          <p style={headingStyle}>App name is:</p>
+          <p style={style}>{app}</p>
+        </div>
       </div>
     );
   }

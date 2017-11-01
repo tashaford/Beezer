@@ -20,22 +20,25 @@ class AccountSelector extends React.Component {
   }
 
   render() {
-      const options = this.props.users.map((user, index) => {
-          return <option value={index} key={index}>{user.name}</option>
-      })
+    const options = this.props.users.map((user, index) => {
+      return <option value={index} key={index}>{user.name}</option>
+    })
 
-      const style = {
-          fontSize: '20px',
-          color: '#000',
-          extAlign: 'center'
-        }
-
-      return (
-        <select style={style} id="users" value={this.state.selectedIndex} onChange={ this.handleChange.bind(this) } >
-          {options}
-        </select>
-      );
+    const style = {
+      fontSize: '20px',
+      color: '#000',
+      textAlign: 'center'
     }
+    const divStyle = {
+      marginLeft: '3em',
+    }
+
+    return (
+      <div style={divStyle}>
+        <select style={style} id="users" value={this.state.selectedIndex} onChange={ this.handleChange.bind(this) } >{options}</select>
+      </div>
+      );
+  }
 }
 
 export default AccountSelector;

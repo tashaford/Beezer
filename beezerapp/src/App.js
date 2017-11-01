@@ -4,11 +4,16 @@ import ListContainer from './containers/ListContainer';
 class App extends Component {
 
   render() {
+
+    const style = {
+      margin: '5em',
+    }
+
     return (
-      <div className="App">
-          <ListContainer />
+      <div style={style} className="App">
+        <ListContainer />
       </div>
-    );
+      );
   }
 }
 

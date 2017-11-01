@@ -26,28 +26,31 @@ class ListContainer extends React.Component {
     })
   }
 
-    setFocusUser(user){
-      this.setState({
-        focusUser: user
-      });
+  setFocusUser(user){
+    this.setState({
+      focusUser: user
+    });
+  }
+  render() {
+
+    const headingStyle = {
+      fontSize: '40px',
+      color: '#800000',
+      fontStyle: 'italic',
     }
-    render() {
+    const textStyle = {
+      fontSize: '25px',
+    }
 
-      const style = {
-          fontSize: '40px',
-          color: '#800000',
-          textAlign: 'center',
-          fontStyle: 'italic',
-        }
-
-      return (
-        <div>
-        <h2 style={style}>Accounts</h2>
+    return (
+      <div>
+        <p style={headingStyle}>Accounts</p>
+        <p style={textStyle}>Pick a user from the list below</p>
         <UserSelector users={this.state.users} selectUser={this.setFocusUser.bind(this)} />
         <AccountDetail user={this.state.focusUser} accounts={this.state.accounts} />
-        </div>
-        );
-    }
+      </div>
+      );
   }
+}
 
-  export default ListContainer;
+export default ListContainer;

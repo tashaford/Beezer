@@ -6,8 +6,8 @@ class App extends Component {
   render() {
 
     const style = {
-      height: '20em',
-      width: '20em',
+      height: '26em',
+      width: '27em',
       margin: '2em',
       background: '#FFF',
     }

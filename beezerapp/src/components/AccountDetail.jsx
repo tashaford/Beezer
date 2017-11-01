@@ -19,14 +19,14 @@ class AccountDetail extends React.Component {
     }
 
     const style = {
-        fontSize: '1em',
+        fontSize: '1.2em',
         color: '#598381',
         margin: '0.2em',
         marginLeft: '4em',
         fontFamily: 'Prompt',
       }
       const headingStyle = {
-        fontSize: '1em',
+        fontSize: '1.2em',
         margin: '0.2em',
         marginLeft: '3em',
         color: '#177E89',

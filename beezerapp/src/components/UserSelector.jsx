@@ -25,7 +25,7 @@ class AccountSelector extends React.Component {
     })
 
     const style = {
-      fontSize: '1em',
+      fontSize: '1.1em',
       color: '#08605F',
       background: '#FFF',
       textAlign: 'center',

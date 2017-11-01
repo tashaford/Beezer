@@ -20,26 +20,29 @@ class AccountDetail extends React.Component {
 
     const style = {
         fontSize: '20px',
-        color: 'rebeccapurple',
-        marginLeft: '6em'
+        color: '#598381',
+        marginLeft: '6em',
+        fontFamily: 'Prompt',
       }
       const headingStyle = {
         fontSize: '20px',
         marginLeft: '5em',
+        color: '#177E89',
+        fontFamily: 'Prompt',
       }
     
     return (
       <div>
         <div>
-          <p style={headingStyle}>User name is:</p>
+          <p style={headingStyle}>User name:</p>
           <p style={style}>{this.props.user.name}</p>
         </div>
         <div>
-          <p style={headingStyle}>User id is:</p>
+          <p style={headingStyle}>User id:</p>
           <p style={style}>{this.props.user.account}</p>
         </div>
         <div>
-          <p style={headingStyle}>App name is:</p>
+          <p style={headingStyle}>App name:</p>
           <p style={style}>{app}</p>
         </div>
       </div>

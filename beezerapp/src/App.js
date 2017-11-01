@@ -5,12 +5,9 @@ class App extends Component {
 
   render() {
 
-    const style = {
-      margin: '5em',
-    }
-
     return (
-      <div style={style} className="App">
+      <div className="App">
+        <style>{'body { background-color: #DCEED1; margin: 3em}'}</style>
         <ListContainer />
       </div>
       );

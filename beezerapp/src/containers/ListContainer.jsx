@@ -36,7 +36,7 @@ class ListContainer extends React.Component {
     const headingStyle = {
       fontSize: '2.5em',
       fontFamily: 'Prompt',
-      margin: '0.05em',
+      margin: '0.5em',
       marginLeft: '0.5em',
     }
     const textStyle = {

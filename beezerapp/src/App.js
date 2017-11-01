@@ -5,10 +5,18 @@ class App extends Component {
 
   render() {
 
+    const style = {
+      height: '20em',
+      width: '20em',
+      margin: '2em',
+      background: '#FFF',
+    }
+
+
     return (
-      <div className="App">
-        <style>{'body { background-color: #DCEED1; margin: 3em}'}</style>
+      <div style={style} className="App">
         <ListContainer />
+        <style>{'body { background-color: #d3d3d3;}'}</style>
       </div>
       );
   }

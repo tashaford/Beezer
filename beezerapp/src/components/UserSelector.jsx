@@ -25,14 +25,15 @@ class AccountSelector extends React.Component {
     })
 
     const style = {
-      fontSize: '20px',
+      fontSize: '1em',
       color: '#08605F',
       background: '#FFF',
       textAlign: 'center',
       fontFamily: 'Prompt',
     }
     const divStyle = {
-      marginLeft: '3em',
+      marginLeft: '1em',
+      marginBottom: '1em',
     }
 
     return (

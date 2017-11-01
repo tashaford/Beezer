@@ -34,22 +34,22 @@ class ListContainer extends React.Component {
   render() {
 
     const headingStyle = {
-      fontSize: '40px',
-      color: '#523249',
+      fontSize: '2em',
       fontFamily: 'Prompt',
-      marginBottom: '0.2em',
+      margin: '0.1em',
+      marginLeft: '0.5em',
     }
     const textStyle = {
-      fontSize: '25px',
+      fontSize: '1em',
       color: '#08605F',
       fontFamily: 'Prompt',
-      marginTop: '0.5em',
-      marginBottom: '0.5em',
+      marginTop: '0.1em',
+      marginLeft: '1em',
     }
 
     return (
       <div>
-        <p style={headingStyle}>Users</p>
+        <p style={headingStyle}>Beezer Users</p>
         <p style={textStyle}>Pick a user from the list below</p>
         <UserSelector users={this.state.users} selectUser={this.setFocusUser.bind(this)} />
         <AccountDetail user={this.state.focusUser} accounts={this.state.accounts} />
